@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3 - Seguidores de Lagrange</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-in">
+        <p class="eyebrow">Seguidores de Lagrange</p>
+        <h1>Módulo 3</h1>
+        <p class="sub">Teoría de redes · Algoritmo de expansión mínima · Ruta más corta · CPM y PERT</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Módulo 1</a>
+    <a href="modulo2.html">Módulo 2</a>
+    <a href="modulo3.html" aria-current="page">Módulo 3</a>
+</nav>
+
+<main class="container">
+
+    <div class="toolbar">
+        <p>4 temas. Selecciona un tema para ver su video y su resumen.</p>
+        <button type="button" id="toggle-all" data-open="0">Expandir todo</button>
+    </div>
+
+    <details class="tema">
+        <summary><span class="tema-n">1</span><span class="tema-t">Teoría de redes</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/g_yNwBAjP20" loading="lazy"
+                    title="Video: Teoría de redes" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/g_yNwBAjP20" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <p>Permite representar y analizar sistemas con elementos conectados, como carreteras, tuberías, rutas o actividades de un proyecto. Una red se forma con nodos unidos por arcos, y cada conexión puede tener un peso (distancia, tiempo, costo o capacidad).</p>
+            <ul class="puntos">
+                <li>Elementos: nodo, arco (dirigido o no), peso, camino y ciclo.</li>
+                <li>Herramientas: árbol de expansión mínima, ruta más corta, CPM y PERT.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="tema">
+        <summary><span class="tema-n">2</span><span class="tema-t">Algoritmo de expansión mínima</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/9-uu2Q_eXLk" loading="lazy"
+                    title="Video: Algoritmo de expansión mínima" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/9-uu2Q_eXLk" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <p>El árbol de expansión mínima conecta todos los nodos de una red con el menor costo total y sin ciclos; con n nodos usa n − 1 aristas. Sirve, por ejemplo, para fibra óptica, cableado o tuberías.</p>
+            <ul class="puntos">
+                <li>Kruskal: ordena las aristas de menor a mayor peso.</li>
+                <li>Agrega cada arista si no forma un ciclo, hasta tener n − 1.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="tema">
+        <summary><span class="tema-n">3</span><span class="tema-t">Ruta más corta</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/Tuna_OzGBxY" loading="lazy"
+                    title="Video: Ruta más corta" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/Tuna_OzGBxY" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <p>Busca el camino de menor costo entre un nodo de origen y uno de destino. A diferencia del árbol de expansión mínima, no conecta todos los nodos. Se usa en navegación, transporte y logística.</p>
+            <ul class="puntos">
+                <li>Dijkstra: parte con distancia 0 en el origen e infinita en los demás.</li>
+                <li>Toma el nodo con menor distancia provisional y actualiza a sus vecinos con distancia actual + peso.</li>
+                <li>Funciona con pesos no negativos.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="tema">
+        <summary><span class="tema-n">4</span><span class="tema-t">CPM y PERT</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/VziDhNIi9R0" loading="lazy"
+                    title="Video: CPM y PERT" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/VziDhNIi9R0" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <h4>CPM</h4>
+            <p>Método de la Ruta Crítica: calcula la duración mínima de un proyecto con tiempos definidos para cada actividad (determinístico). La ruta crítica reúne las actividades con holgura cero, y cualquier retraso en ellas retrasa el proyecto.</p>
+            <ul class="puntos">
+                <li>Holgura = LS − ES, con tiempos de inicio y fin tempranos (ES, EF) y tardíos (LS, LF).</li>
+            </ul>
+            <h4>PERT</h4>
+            <p>Se usa cuando las duraciones son inciertas. Cada actividad tiene tres estimaciones: optimista (a), más probable (m) y pesimista (b).</p>
+            <ul class="puntos">
+                <li>Tiempo esperado: te = (a + 4m + b) / 6.</li>
+                <li>Varianza = ((b − a) / 6)²; permite estimar la probabilidad de cumplir un plazo con Z = (T − μ) / σ.</li>
+            </ul>
+            <h4>Diferencia principal</h4>
+            <p>CPM usa una sola estimación de tiempo; PERT usa tres y mide la incertidumbre.</p>
+        </div>
+    </details>
+
+    <div class="pager"><a href="modulo2.html">&larr; Módulo 2</a><a href="index.html">Inicio &rarr;</a></div>
+
+</main>
+
+<footer>
+    <img class="logo" src="logo.png" alt="Sello de la Universidad Mariano Gálvez de Guatemala" width="84" height="84">
+    <p class="f-name">Seguidores de Lagrange</p>
+    <p>Investigación de Operaciones</p>
+    <p>Universidad Mariano Gálvez de Guatemala</p>
+</footer>
+<script>
+(function () {
+    var all = document.querySelectorAll("details.tema");
+    var btn = document.getElementById("toggle-all");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+        var open = btn.dataset.open !== "1";
+        all.forEach(function (d) { d.open = open; });
+        btn.dataset.open = open ? "1" : "0";
+        btn.textContent = open ? "Contraer todo" : "Expandir todo";
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 - Seguidores de Lagrange</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-in">
+        <p class="eyebrow">Seguidores de Lagrange</p>
+        <h1>Módulo 2</h1>
+        <p class="sub">Método dual · Modelos de asignación · Modelos de transporte</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="modulo1.html">Módulo 1</a>
+    <a href="modulo2.html" aria-current="page">Módulo 2</a>
+    <a href="modulo3.html">Módulo 3</a>
+</nav>
+
+<main class="container">
+
+    <div class="toolbar">
+        <p>3 temas. Selecciona un tema para ver su video y su resumen.</p>
+        <button type="button" id="toggle-all" data-open="0">Expandir todo</button>
+    </div>
+
+    <details class="tema">
+        <summary><span class="tema-n">1</span><span class="tema-t">Método dual</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/L2Gt9fLvY_M" loading="lazy"
+                    title="Video: Método dual" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/L2Gt9fLvY_M" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <h4>Método dual</h4>
+            <p>Transforma un problema primal en un problema dual asociado. Un primal de maximización se relaciona con un dual de minimización, y viceversa.</p>
+            <ul class="puntos">
+                <li>Cada restricción del primal es una variable del dual, y la matriz de coeficientes se transpone.</li>
+                <li>Si ambos tienen solución óptima, comparten el mismo valor óptimo.</li>
+                <li>Las variables duales representan el valor marginal de los recursos.</li>
+            </ul>
+            <h4>Análisis de sensibilidad</h4>
+            <p>Estudia cómo cambia la solución óptima al modificar los parámetros del modelo, sin resolverlo de nuevo.</p>
+            <ul class="puntos">
+                <li>Rango de optimalidad: cuánto puede cambiar un coeficiente de la función objetivo.</li>
+                <li>Rango de factibilidad: cuánto puede variar el lado derecho de una restricción.</li>
+                <li>Precio sombra: cambio del valor óptimo por cada unidad adicional de un recurso.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="tema">
+        <summary><span class="tema-n">2</span><span class="tema-t">Modelos de asignación</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/cAMwVe3dZyk" loading="lazy"
+                    title="Video: Modelos de asignación" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/cAMwVe3dZyk" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <h4>Modelo de asignación</h4>
+            <p>Asigna recursos a actividades de forma individual, por ejemplo trabajadores a tareas. Se representa con una matriz de costos, tiempos o beneficios, y las variables son binarias (1 asigna, 0 no).</p>
+            <ul class="puntos">
+                <li>Si la matriz no es cuadrada, se agrega una fila o columna ficticia.</li>
+            </ul>
+            <h4>Método húngaro</h4>
+            <p>Resuelve la asignación sin revisar todas las combinaciones.</p>
+            <ul class="puntos">
+                <li>Se reducen filas y columnas para generar ceros.</li>
+                <li>Se cubren los ceros con el menor número de líneas y se ajusta la matriz si hace falta.</li>
+                <li>En maximización se convierte primero a minimización.</li>
+            </ul>
+        </div>
+    </details>
+
+    <details class="tema">
+        <summary><span class="tema-n">3</span><span class="tema-t">Modelos de transporte</span></summary>
+        <div class="tema-body">
+            <div class="video-placeholder">
+                <iframe src="https://www.youtube.com/embed/_PnBytwsrOA" loading="lazy"
+                    title="Video: Modelos de transporte" allowfullscreen></iframe>
+            </div>
+            <p class="yt">Si el video no carga, <a href="https://youtu.be/_PnBytwsrOA" target="_blank" rel="noopener">míralo en YouTube</a>.</p>
+            <h3>Resumen</h3>
+                        <h4>Modelo de transporte</h4>
+            <p>Determina cómo distribuir productos desde varios orígenes a varios destinos según la oferta, la demanda y los costos, normalmente para minimizar el costo total. Está balanceado cuando la oferta es igual a la demanda; si no, se agrega un origen o destino ficticio.</p>
+            <h4>Soluciones iniciales</h4>
+            <p>Tres métodos dan un punto de partida, que no necesariamente es la solución óptima.</p>
+            <ul class="puntos">
+                <li>Esquina Noroeste: asigna desde la esquina superior izquierda sin considerar costos.</li>
+                <li>Costo Mínimo: asigna primero en las rutas más baratas.</li>
+                <li>Vogel: usa penalizaciones (diferencia entre los dos menores costos) y suele dar mejores resultados.</li>
+            </ul>
+        </div>
+    </details>
+
+    <div class="pager"><a href="modulo1.html">&larr; Módulo 1</a><a href="modulo3.html">Módulo 3 &rarr;</a></div>
+
+</main>
+
+<footer>
+    <img class="logo" src="logo.png" alt="Sello de la Universidad Mariano Gálvez de Guatemala" width="84" height="84">
+    <p class="f-name">Seguidores de Lagrange</p>
+    <p>Investigación de Operaciones</p>
+    <p>Universidad Mariano Gálvez de Guatemala</p>
+</footer>
+<script>
+(function () {
+    var all = document.querySelectorAll("details.tema");
+    var btn = document.getElementById("toggle-all");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+        var open = btn.dataset.open !== "1";
+        all.forEach(function (d) { d.open = open; });
+        btn.dataset.open = open ? "1" : "0";
+        btn.textContent = open ? "Contraer todo" : "Expandir todo";
+    });
+})();
+</script>
+</body>
+</html>
